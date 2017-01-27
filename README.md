@@ -17,12 +17,11 @@ The [mxGraph documentation](https://jgraph.github.io/mxgraph/) provides a lot of
 
 Docker
 ------
-
 ```
 docker pull jonberenguer/draw.io
 docker run -p 8080:80 -d jonberenguer/draw.io
 ```
-Go to URLs: http://localhost:8080/draw.io/war/index.html?offline=1
+Go to: http://localhost:8080/draw.io/war/index.html?offline=1
 
 Note: offline=1 is to run draw.io offline without any cloud storage support. 
 
