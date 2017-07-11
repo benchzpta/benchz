@@ -190,7 +190,7 @@ App.getStoredMode = function()
 {
 	if (!mxClient.IS_CHROMEAPP)
 	{
-		if (urlParams['offline'] != '1')
+		/*if (urlParams['offline'] != '1')
 		{
 			// Switches to dropbox mode for db.draw.io
 			if (window.location.hostname == 'db.draw.io' && urlParams['mode'] == null)
@@ -205,7 +205,7 @@ App.getStoredMode = function()
 				// Stored mode overrides preferred mode
 				App.mode = App.getStoredMode();
 			}
-		}
+		}*/
 
 		/**
 		 * Lazy loading backends.
@@ -300,7 +300,7 @@ App.getStoredMode = function()
 		/**
 		 * Loading plugins.
 		 */
-		if (urlParams['plugins'] != '0' && urlParams['offline'] != '1')
+		if (urlParams['plugins'] != '0' && urlParams['offline'] != '1' && false)
 		{
 			var plugins = mxSettings.getPlugins();
 			var temp = urlParams['p'];
@@ -434,7 +434,7 @@ App.main = function(callback)
 		/**
 		 * Injects offline dependencies
 		 */
-		if (urlParams['offline'] == '1')
+		if (true || urlParams['offline'] == '1')
 		{
 			mxscript('js/shapes.min.js');
 			
