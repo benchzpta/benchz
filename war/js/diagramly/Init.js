@@ -38,7 +38,7 @@ window.DRAWIO_LOG_URL = window.DRAWIO_LOG_URL || '';
 window.mxLoadResources = window.mxLoadResources || false;
 window.mxLanguage = window.mxLanguage || (function() 
 {
-	var lang = (urlParams['offline'] == '1') ? 'en' : urlParams['lang'];
+	var lang = (true) ? 'en' : urlParams['lang'];
 	
 	// Known issue: No JSON object at this point in quirks in IE8
 	if (lang == null && typeof(JSON) != 'undefined')
@@ -224,7 +224,7 @@ if (ex != null)
 }
 
 // Enables offline mode
-if (urlParams['offline'] == '1' || urlParams['demo'] == '1' || urlParams['stealth'] == '1' || urlParams['local'] == '1')
+if (true || urlParams['demo'] == '1' || urlParams['stealth'] == '1' || urlParams['local'] == '1')
 {
 	urlParams['analytics'] = '0';
 	urlParams['picker'] = '0';
@@ -234,7 +234,7 @@ if (urlParams['offline'] == '1' || urlParams['demo'] == '1' || urlParams['stealt
 }
 
 // Disables math in offline mode
-if (urlParams['offline'] == '1' || urlParams['local'] == '1')
+if (true || urlParams['local'] == '1')
 {
 	urlParams['math'] = '0';
 }
